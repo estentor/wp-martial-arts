@@ -1,0 +1,391 @@
+/* fuentes de google */
+/*
+    font-family: 'Rokkitt', serif;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Elsie', cursive;
+*/
+@import url('https://fonts.googleapis.com/css?family=Elsie|Montserrat+Alternates|Rokkitt');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 14pt;
+    font-family: Helvetica;
+}
+body {
+    background-color: #CDCDCD;
+}
+
+header {
+    width: 100%;
+    background: darkslateblue;
+    height:80px;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow:0 2px 6px rgba(0,0,0,0.2);
+    animation:slide-down 0.7s;
+    opacity:0.9;
+    z-index: 300;
+  }
+
+.ancho {
+    width:80%;
+    height: 80px;
+    margin:auto;
+}
+.logo{
+    width: 30%;
+    height: 80px;
+    float:left;
+    padding-top: 2%;
+    box-sizing: border-box;
+}
+.redes a{
+    color: white;
+    margin-right: 5px;
+}
+.redes a:hover{
+    color:#111;
+}
+.redes i{
+    font-size: 1.5rem;
+}
+.logo p a{
+    color:#fff;
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.logo a img{
+    color: #FFF;
+    font-size: 3rem;
+    text-align: center;
+    box-sizing: border-box;
+}
+.logo-hidden{
+    visibility: hidden;
+}
+nav {
+    width: 70%;
+    height: 80px;
+    float:left;
+    text-align: right;
+    padding: 2%;
+}
+nav ul li{
+    display: inline;
+    border-right: 1px solid #fff;
+}
+nav ul li:last-child{
+    border-right: none;
+}
+nav ul li a{
+    color:#FFF;
+    font-size: .8rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin:1%;
+}
+nav ul li a:hover{
+    color: #111;
+}
+/* main */
+main {
+    width: 100%;
+    margin: auto;
+    background: #AAAAAA;
+}
+/* estilo comun para el contenido dentro de la seccion */
+.content{
+    width: 80%;
+    margin: auto;
+}
+
+.parallax{
+    background: #FFF fixed no-repeat 50% 50%;
+    background-size: cover;
+    min-height: 700px;
+}
+/** INICIO **/
+#inicio{
+    background-image: url('../img/marts1.jpg');
+}
+/** KENPO **/
+#kenpo{
+    background-image: url('../img/marts2.jpg');
+}
+.titulo-inner {
+    width: 100%;
+    float: left;
+
+}
+.titulo-inner h1{
+    text-align: center;
+    margin-top:10%;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-family: Rokkit;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color:#FFF;
+
+}
+.titulo-inner h3{
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Elisie';
+    font-size: .9rem;
+    font-style: oblique;
+    font-weight: 400;
+    color:#FFF;
+}
+.info-content{
+    color:#FFF;
+    font-size: .9rem;
+    text-align: center;
+    line-height: 1.5;
+}
+/** TEAM **/
+#team{
+    background-image: url('../img/marts3.jpg');
+}
+
+.titulo{
+    width: 100%;
+    float: left;
+    margin-top: 25px;
+
+}
+.titulo h1{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    color:#FFF;
+}
+.team-class article{
+    margin-top: 50px;
+    width: 24%;
+    float: left;
+    border: solid 1px #FFF ;
+    border-radius: 5px;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    height: 400px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.6);
+    overflow: hidden;
+
+}
+.team-class article img{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+.team-class article img:hover{
+    transform: scale(1.1);
+    max-width: 100%;
+    border-radius: 5px;
+}
+.team-class article h2{
+    width: 90%;
+    font-size: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:10px;
+    color: #FFF;
+    text-shadow: 1px 1px #444;
+}
+
+.team-class article p{
+    font-size: .85rem;
+    text-align: justify;
+    overflow: hidden;
+    margin:10px;
+    margin-top:10px;
+    color: #DDD;
+    text-shadow: 1px 1px #444;
+    overflow: hidden;
+}
+
+#events{
+    background-image: url('../img/marts4.jpg');
+}
+/** GALLERY **/
+
+/* The grid: Four equal columns that floats next to each other */
+.column-gallery {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    height: 25%;
+
+}
+
+/* Style the images inside the grid */
+.column-gallery img {
+    opacity: 0.8;
+    cursor: pointer;
+    width: 100%;
+}
+
+.column-gallery img:hover {
+    opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row-gallery:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* The expanding image container (positioning is needed to position the close button and the text) */
+.container-gallery {
+    position: relative;
+    display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+    margin-left: 10%;
+}
+.expandedImg{
+    width:80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: solid 1px #cdcdcd;
+}
+/* Closable button inside the image */
+.closebtn-gallery {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+    margin-right: 10%;
+}
+
+/** BLOG **/
+#blog{
+    background-image: url('../img/marts5.jpg');
+}
+/** article blogs **/
+/**.blog-class article:nth-child(odd)
+
+.blog-class article:nth-child(even)
+**/
+
+/** Contacto **/
+
+#contact{
+    background-image: url('../img/marts6.jpg');
+}
+.contact-horario{
+    margin-top: 30px;
+    width: 30%;
+    float: left;
+    margin-left: auto;
+    line-height: 1.5;
+}
+.contact-horario h1{
+    text-transform: uppercase;
+    color:#FFF;
+    font-size: 1.2rem;
+    float: left;
+    line-height: 1.5;
+}
+.contact-horario h3{
+    font-size: .9rem;
+    color: #FFF;
+    float: left;
+    line-height: 1.5;
+}
+.contact-horario p{
+    font-size: .9rem;
+    color: #FFF;
+    float: left;
+    line-height: 1.5;
+}
+.contact-map {
+    margin-top: 30px;
+    width: 70%;
+    float: left;
+    line-height: 1.5;
+}
+
+.contact-correo{
+    margin-top: 10px;
+    font-size: .9rem;
+    color: #FFF;
+    float: left;
+}
+.contact-text{
+    margin-top: 10px;
+    font-size: .7rem!important;
+}
+.contact-correo a{
+    color: #fff;
+    text-decoration: none;
+}
+.contact-correo a:hover{
+    color: gray;
+    text-decoration: none;
+}
+.logo-principal{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+.logo-principal img{
+    margin-top:20px;
+    max-width: 480px;
+}
+
+
+/* footer */
+footer {
+    clear: both;
+    width: 100%;
+    min-height: 70px;
+    background-color: #111;
+    position: absolute;
+}
+.footer-content{
+    color:#FFF;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.footer-content p{
+    margin-top: 20px;
+    float: left;
+}
+
+.footer-content a {
+    float: right;
+    margin-right: 5%;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #FFF;
+}
+
+.footer-content i{
+    color:white;
+    font-size: 24px;
+}
