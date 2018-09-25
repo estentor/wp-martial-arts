@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tercer intento</title>
+    <title><?php bloginfo( 'name' ); echo ': '; bloginfo('description')?></title>
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/custom.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/responsive.css" type="text/css" media="screen" />
@@ -27,14 +27,13 @@
 
             </div>
             <nav>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#kenpo">Kenpo</a></li>
-                    <li><a href="#">Eventos</a></li>
-                    <li><a href="#">Equipo</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contactanos</a></li>
-                </ul>
+                <?php 
+                    wp_nav_menu(array(
+                        'container'=> 'false',
+                        'items_wrap' => '<ul>%3$s</ul>',
+                        'theme_location' => 'menu'
+                    ));
+                ?>
             </nav>
         </div>
     </header><!-- header -->
