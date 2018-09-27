@@ -27,30 +27,24 @@
         <div class="titulo">
             <h1>Conoce a los instructores.</h1>
         </div>
+        <?php 
+        $args = array(
+            'category_name' => 'Equipo',
+            'posts_per_page' => 4
+        );
+        $my_query = new WP_Query( $args );
+        if ( $my_query -> have_posts() ) : while ( $my_query -> have_posts() ) : $my_query -> the_post(); ?>
         <article>
-            <img src="http://picsum.photos/370/230/" alt="">
-            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, voluptatum quae quia sapiente itaque consectetur perspiciatis
-                dolores temporibus saepe dolore eum hic cumque. Natus, nam error veritatis quis possimus tenetur.</p>
-        </article>
-        <article>
-                <img src="http://picsum.photos/370/230/" alt="">
-            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, voluptatum quae quia sapiente itaque consectetur perspiciatis
-                dolores temporibus saepe dolore eum hic cumque. Natus, nam error veritatis quis possimus tenetur.</p>
-        </article>
-        <article>
-            <img src="http://picsum.photos/370/230/" alt="">
-            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, voluptatum quae quia sapiente itaque consectetur perspiciatis
-                dolores temporibus saepe dolore eum hic cumque. Natus, nam error veritatis quis possimus tenetur.</p>
-        </article>
-        <article>
-            <img src="http://picsum.photos/370/230/" alt="">
-            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, voluptatum quae quia sapiente itaque consectetur perspiciatis
-                dolores temporibus saepe dolore eum hic cumque. Natus, nam error veritatis quis possimus tenetur.</p>
-        </article>
+            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('team_thumbs');?></a>
+            <h2><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h2> 
+            <p><?php echo (substr(the_excerpt(), 0, 60)); ?></p> 
+        </article>   
+        <?php endwhile; 
+            wp_reset_postdata();
+            else : ?>
+	        <p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
+        <?php endif; ?>
+        
     </div>
   </div><!-- team -->
 
@@ -93,8 +87,12 @@
 
   <div id="blog" class="parallax">
     <div class="content blog-class">
-
-
+        <div class="titulo">
+            <h1>Video destacado</h1>
+        </div>
+        <div class="video-destacado">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/qrCq8cfAk0I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>   
     </div>
   </div><!-- blog -->
 
